@@ -56,18 +56,22 @@ git clone https://github.com/andreslfdz/openseo.git
 
 # Codex
 mkdir -p ~/.codex/skills
-cp -R openseo/.agents/skills/* ~/.codex/skills/
+cp -R openseo/plugins/openseo/skills/* ~/.codex/skills/
 
 # Claude Code
 mkdir -p ~/.claude/skills
-cp -R openseo/.agents/skills/* ~/.claude/skills/
+cp -R openseo/plugins/openseo/skills/* ~/.claude/skills/
 ```
 
 You can also review the source skills on GitHub:
 
-- [OpenSEO Agent Skills on GitHub](https://github.com/andreslfdz/openseo/tree/openseo-rename/.agents/skills)
+- [OpenSEO Agent Skills on GitHub](https://github.com/andreslfdz/openseo/tree/openseo-rename/plugins/openseo/skills)
 
 Each skill page also links to its source `SKILL.md`.
+
+## Update installed skills
+
+Use the [update prompt or commands for your installation method](/docs/agent-setup#update-your-skills). Update the OpenSEO plugin if it supplies your skills; otherwise use the installer you originally chose or update your manual copies.
 
 ## Run a skill
 
