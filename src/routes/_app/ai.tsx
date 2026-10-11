@@ -24,19 +24,19 @@ const SKILL_NAMES = [
   "local-seo",
   "seo-audit",
 ];
-const SKILLS_INSTALL = `npx skills add every-app/open-seo`;
-const ALL_SKILLS_INSTALL = `npx skills add every-app/open-seo --skill '*'`;
-const CLAUDE_CODE_SKILLS_INSTALL = `npx skills add every-app/open-seo --skill '*' --agent claude-code`;
-const CODEX_SKILLS_INSTALL = `npx skills add every-app/open-seo --skill '*' --agent codex`;
-const SKILLS_MANUAL_INSTALL = `git clone https://github.com/every-app/open-seo.git
+const SKILLS_INSTALL = `npx skills add andreslfdz/openseo`;
+const ALL_SKILLS_INSTALL = `npx skills add andreslfdz/openseo --skill '*'`;
+const CLAUDE_CODE_SKILLS_INSTALL = `npx skills add andreslfdz/openseo --skill '*' --agent claude-code`;
+const CODEX_SKILLS_INSTALL = `npx skills add andreslfdz/openseo --skill '*' --agent codex`;
+const SKILLS_MANUAL_INSTALL = `git clone https://github.com/andreslfdz/openseo.git openseo
 
 # Codex
 mkdir -p ~/.codex/skills
-cp -R open-seo/.agents/skills/* ~/.codex/skills/
+cp -R openseo/.agents/skills/* ~/.codex/skills/
 
 # Claude Code
 mkdir -p ~/.claude/skills
-cp -R open-seo/.agents/skills/* ~/.claude/skills/`;
+cp -R openseo/.agents/skills/* ~/.claude/skills/`;
 
 export const Route = createFileRoute("/_app/ai")({
   component: AiPage,

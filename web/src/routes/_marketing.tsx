@@ -9,9 +9,9 @@ import { NewsletterSignup } from "@/components/newsletter-signup";
 import { SiteFooter } from "@/components/site-footer";
 import { featureGroups } from "@/lib/feature-pages";
 
-const GITHUB_REPO = "every-app/open-seo";
+const GITHUB_REPO = "andreslfdz/openseo";
 // Used if GitHub is unreachable at build time so the header never renders empty.
-const FALLBACK_STAR_COUNT = "2.1k";
+const FALLBACK_STAR_COUNT = "0";
 
 // Round to the nearest hundred and render in thousands, e.g. 3140 -> "3.1k".
 function formatStarCount(count: number): string {
@@ -70,7 +70,7 @@ function getMobileNavItems(githubStarCount: string) {
       links: [
         {
           label: `GitHub ${githubStarCount}`,
-          href: "https://github.com/every-app/open-seo",
+          href: "https://github.com/andreslfdz/openseo",
         },
       ],
     },
@@ -190,7 +190,7 @@ function MarketingLayout() {
                 {mobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
               </button>
               <a
-                href="https://github.com/every-app/open-seo"
+                href="https://github.com/andreslfdz/openseo"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`GitHub, ${githubStarCount} stars`}

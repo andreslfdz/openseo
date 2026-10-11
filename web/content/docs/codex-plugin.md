@@ -10,7 +10,7 @@ The OpenSEO plugin bundles OpenSEO MCP and all nine SEO Agent Skills into one in
 Run these commands in your terminal:
 
 ```bash
-codex plugin marketplace add every-app/open-seo
+codex plugin marketplace add andreslfdz/openseo
 codex plugin add openseo@openseo
 codex mcp login openseo
 ```

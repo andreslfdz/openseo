@@ -167,7 +167,7 @@ function getDefaultFromTag() {
 }
 
 function getPreferredRepo() {
-  return getRemoteRepo("public") ?? getRemoteRepo("origin");
+  return getRemoteRepo("origin") ?? getRemoteRepo("public");
 }
 
 /** @param {string | undefined} repo */

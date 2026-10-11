@@ -10,7 +10,7 @@ The OpenSEO plugin bundles OpenSEO MCP and all nine SEO Agent Skills into one in
 Run these two commands in Claude Code:
 
 ```bash
-/plugin marketplace add every-app/open-seo
+/plugin marketplace add andreslfdz/openseo
 /plugin install openseo@openseo
 ```
 

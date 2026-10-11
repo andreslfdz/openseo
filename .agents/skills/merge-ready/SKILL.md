@@ -15,24 +15,24 @@ Drive the current work to the point where the only remaining step is the maintai
 
 This skill composes with feature work — it is not only a review pass:
 
-- **Invoked alongside a build request** ("build X, make it merge-ready"): implement the feature/fix first, committing as you go, then continue below. The review phases cover _all_ changes on the branch vs `origin/main`, not just the last edit.
-- **Invoked on existing work** ("make this branch merge-ready"): start directly at step 1. The scope is `git diff origin/main...HEAD` plus anything uncommitted.
+- **Invoked alongside a build request** ("build X, make it merge-ready"): implement the feature/fix first, committing as you go, then continue below. The review phases cover _all_ changes on the branch vs `origin/openseo-rename`, not just the last edit.
+- **Invoked on existing work** ("make this branch merge-ready"): start directly at step 1. The scope is `git diff origin/openseo-rename...HEAD` plus anything uncommitted.
 
-## 1. Sync with main
+## 1. Sync with the fork default branch
 
-- `git fetch origin main`. If the branch is behind, merge `origin/main` in and resolve conflicts (favor main's version for code this branch didn't intentionally change).
+- `git fetch origin openseo-rename`. If the branch is behind, merge `origin/openseo-rename` in and resolve conflicts (favor the fork default branch's version for code this branch didn't intentionally change).
 - **Checkpoint:** commit the merge before starting review, so conflict resolution is auditable separately from review fixes.
 
 ## 2. Multi-axis subagent review
 
 Spawn independent review subagents **in parallel**, one per axis, each given repo access and the complete branch scope:
 
-- committed changes: `git diff origin/main...HEAD`
+- committed changes: `git diff origin/openseo-rename...HEAD`
 - staged changes: `git diff --cached`
 - unstaged changes: `git diff`
 - untracked files: `git status --short`, followed by reading every in-scope untracked file
 
-Do not let an uncommitted or newly created file escape review merely because it is absent from `origin/main...HEAD`.
+Do not let an uncommitted or newly created file escape review merely because it is absent from `origin/openseo-rename...HEAD`.
 
 1. **Unnecessary complexity** — thin wrappers, needless indirection, single-use abstractions, defensive guards for impossible states, dead config. This codebase deliberately stays simple.
 2. **Security** — authz on new endpoints (org/project scoping), SSRF, injection, secrets handling, anything user-input-shaped reaching D1/R2/external APIs.
@@ -63,7 +63,7 @@ After verification, route durable learnings without forcing every review to chan
 
 ## 5. Push and open/update the PR
 
-- Push the branch. Open a PR against `main` if one doesn't exist; otherwise update the existing PR's description.
+- Push the branch. Open a PR against `openseo-rename` if one doesn't exist; otherwise update the existing PR's description.
 - PR description requirements:
   - **High-level** — what changed and why, written for a human skimming. No file paths, no per-file changelog.
   - **How to review** — a short ordered guide: what to look at first, what the risky/judgment-call areas are, what was deliberately left out of scope.

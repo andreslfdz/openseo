@@ -5,7 +5,7 @@ import { toast } from "sonner";
 
 const SUPPORT_EMAIL = "ben@openseo.so";
 const DISCORD_URL = "https://discord.gg/c9uGs3cFXr";
-const GITHUB_URL = "https://github.com/every-app/open-seo";
+const GITHUB_URL = "https://github.com/andreslfdz/openseo";
 
 export const Route = createFileRoute("/_app/support")({
   component: SupportPage,

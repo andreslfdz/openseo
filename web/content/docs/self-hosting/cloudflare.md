@@ -13,11 +13,11 @@ Host OpenSEO on Cloudflare for internet-facing self-hosting across multiple devi
 
 ## 1) Clone your OpenSEO repo
 
-Fork `every-app/open-seo` on GitHub if you want a repo you control, then clone it locally:
+Clone this fork locally:
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USER/open-seo.git
-cd open-seo
+git clone https://github.com/andreslfdz/openseo.git
+cd openseo
 corepack enable
 pnpm install
 ```
@@ -25,8 +25,8 @@ pnpm install
 If you do not need a fork, clone the upstream repo instead:
 
 ```bash
-git clone https://github.com/every-app/open-seo.git
-cd open-seo
+git clone https://github.com/every-app/open-seo.git openseo
+cd openseo
 corepack enable
 pnpm install
 ```
@@ -99,5 +99,5 @@ pnpm deploy:selfhost --yes
 
 ## More guides on GitHub
 
-- [Operations](https://github.com/every-app/open-seo/blob/main/docs/SELF_HOSTING_CLOUDFLARE_OPERATIONS.md): telemetry and other day-to-day tasks.
-- [Legacy deployments](https://github.com/every-app/open-seo/blob/main/docs/SELF_HOSTING_CLOUDFLARE_LEGACY.md): maintenance for installs created with the retired Deploy-button or manual Wrangler flows.
+- [Operations](https://github.com/andreslfdz/openseo/blob/openseo-rename/docs/SELF_HOSTING_CLOUDFLARE_OPERATIONS.md): telemetry and other day-to-day tasks.
+- [Legacy deployments](https://github.com/andreslfdz/openseo/blob/openseo-rename/docs/SELF_HOSTING_CLOUDFLARE_LEGACY.md): maintenance for installs created with the retired Deploy-button or manual Wrangler flows.

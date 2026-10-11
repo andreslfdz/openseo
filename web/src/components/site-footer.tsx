@@ -64,7 +64,7 @@ export function SiteFooter({ className }: { className?: string }) {
             <Link to="/roadmap">Roadmap</Link>
             <Link to="/pricing">Pricing</Link>
             <a
-              href="https://github.com/every-app/open-seo"
+              href="https://github.com/andreslfdz/openseo"
               target="_blank"
               rel="noopener noreferrer"
             >

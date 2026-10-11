@@ -4,7 +4,7 @@ import { buildPageSeo } from "@/lib/seo";
 
 const SUPPORT_EMAIL = "ben@openseo.so";
 const DISCORD_URL = "https://discord.gg/c9uGs3cFXr";
-const GITHUB_ISSUES_URL = "https://github.com/every-app/open-seo/issues";
+const GITHUB_ISSUES_URL = "https://github.com/andreslfdz/openseo/issues";
 
 export const Route = createFileRoute("/_marketing/support")({
   head: () =>

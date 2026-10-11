@@ -41,12 +41,15 @@ The generator:
 
 Store finalized notes in `release-notes/` as versioned Markdown files such as `release-notes/v0.0.2.md`.
 
+Set `package.json` to the intended release version, then use the matching notes file. The publish helper targets `andreslfdz/openseo` on `openseo-rename`.
+
 Recommended release flow:
 
 ```sh
 pnpm -s release:notes
 # edit and save the final copy in release-notes/v0.0.2.md
-gh release create v0.0.2 --target main --title v0.0.2 --notes-file release-notes/v0.0.2.md
+pnpm release:publish -- --dry-run
+pnpm release:publish
 ```
 
 For now, prefer patch releases while the project is still in rapid early development unless there is a clear reason to cut a minor or major release.
