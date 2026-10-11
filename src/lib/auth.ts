@@ -291,6 +291,10 @@ function getTrustedOrigins(baseUrl: string) {
 
   if (process.env.NODE_ENV !== "production") {
     trustedOrigins.push(
+      "http://openseo.localhost:1355",
+      "http://*.openseo.localhost:1355",
+      "https://openseo.localhost:1355",
+      "https://*.openseo.localhost:1355",
       "http://open-seo.localhost:1355",
       "http://*.open-seo.localhost:1355",
       "https://open-seo.localhost:1355",
