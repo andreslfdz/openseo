@@ -1,7 +1,11 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it, vi } from "vitest";
 
-vi.mock("cloudflare:workers", () => ({ DurableObject: class {} }));
+vi.mock("cloudflare:workers", () => ({
+  DurableObject: class {
+    readonly ctx = null;
+  },
+}));
 
 import { OnboardingChatAgent } from "./OnboardingChatAgent";
 
@@ -12,9 +16,9 @@ describe("retained onboarding conversations", () => {
         throw new Error("Existing storage must remain untouched");
       },
     };
-    expect(() =>
-      Reflect.construct(OnboardingChatAgent, [state, {}]),
-    ).not.toThrow();
+    expect(() => {
+      Reflect.construct(OnboardingChatAgent, [state, {}]);
+    }).not.toThrow();
   });
 
   it("keeps the deployed class binding and does not delete its namespace", () => {
