@@ -1,6 +1,6 @@
 ---
 name: merge-ready
-description: Get a branch ready for the maintainer's final review: review it for security, simplicity, and billing abuse, fix what's real, get checks passing, and open or update the PR. Use whenever the user says a feature, fix, or branch should be "merge ready", asks to get changes ready for review, or appends this to a build request ("build X and make it merge-ready").
+description: Get a branch ready for the maintainer's final review. Review it for security, simplicity, and billing abuse, fix what's real, get checks passing, and open or update the PR. Use whenever the user says a feature, fix, or branch should be "merge ready", asks to get changes ready for review, or appends this to a build request ("build X and make it merge-ready").
 metadata:
   internal: true
 ---
